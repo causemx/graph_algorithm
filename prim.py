@@ -1,7 +1,10 @@
 def prim(graph, root):
     assert type(graph)==dict
 
-    nodes = graph.keys()
+    # for python 2.x
+    #nodes = graph.keys()
+    # for python 3.x
+    node = list(graph)
     nodes.remove(root)
     
     visited = [root]
@@ -34,4 +37,4 @@ if __name__ == '__main__':
     }
 
     path = prim(graph_dict, 's12')
-    print path
+    print(path)
